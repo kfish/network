@@ -29,6 +29,7 @@ library
     Network.Socket.ByteString
     Network.Socket.ByteString.Lazy
     Network.Socket.Internal
+    Network.Socket.Options
     Network.URI
   other-modules:
     Network.Socket.ByteString.Internal
@@ -52,7 +53,7 @@ library
   include-dirs: include
   includes: HsNet.h
   install-includes: HsNet.h HsNetworkConfig.h
-  c-sources: cbits/HsNet.c
+  c-sources: cbits/HsNet.c cbits/sockopt.c
   if impl(ghc >= 6.8)
     ghc-options: -fwarn-tabs
 
